@@ -206,7 +206,7 @@ export function HeroSection() {
         transition={{ duration: 0.8, delay: 0.8 }}
       >
         <h1
-          className="text-[3rem] min-[375px]:text-[3.5rem] min-[390px]:text-[3.75rem] min-[430px]:text-[4.25rem] sm:text-[6rem] md:text-[9rem] lg:text-[11rem] xl:text-[13rem] 2xl:text-[16rem] font-serif font-bold tracking-tighter text-center leading-[0.85] pb-6 sm:pb-0 sm:translate-y-[8%]"
+          className="text-[3rem] min-[375px]:text-[3.5rem] min-[390px]:text-[3.75rem] min-[430px]:text-[4.25rem] sm:text-[5rem] md:text-[7rem] lg:text-[9rem] xl:text-[11rem] 2xl:text-[13rem] font-serif font-bold tracking-tighter text-center leading-[0.85] pb-6 sm:pb-0 sm:translate-y-[8%] whitespace-nowrap"
         >
           <span className="text-foreground">Safar</span>
           <span className="text-primary"> Kitchen</span>
