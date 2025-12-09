@@ -182,11 +182,14 @@ html {
   scroll-behavior: smooth;
   margin: 0;
   padding: 0;
+  -webkit-overflow-scrolling: touch; /* iOS momentum scrolling */
+  scroll-padding-top: 5rem; /* Account for fixed navigation */
 }
 
 body {
   margin: 0;
   padding: 0;
+  overscroll-behavior-y: none; /* Prevent pull-to-refresh on mobile */
 }
 
 /* Custom scrollbar */
