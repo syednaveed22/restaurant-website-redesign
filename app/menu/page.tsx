@@ -451,10 +451,10 @@ export default function MenuPage() {
               {section.items.map((item, index) => (
                 <motion.div
                   key={item.name}
-                  initial={{ opacity: 0, y: 20 }}
+                  initial={{ opacity: 0, y: 10 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.05 }}
+                  viewport={{ once: true, amount: 0.3, margin: "0px 0px -50px 0px" }}
+                  transition={{ duration: 0.4, delay: index * 0.03, ease: "easeOut" }}
                   whileHover={{ 
                     y: -8,
                     scale: 1.02,
