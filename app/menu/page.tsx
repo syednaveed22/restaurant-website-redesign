@@ -449,66 +449,35 @@ export default function MenuPage() {
             {/* Menu Items Grid - Two columns like Klane */}
             <div className="grid md:grid-cols-2 gap-x-8 md:gap-x-16 gap-y-6 sm:gap-y-8">
               {section.items.map((item, index) => (
-                <motion.div
+                <div
                   key={item.name}
-                  initial={{ opacity: 0, y: 10 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, amount: 0.3, margin: "0px 0px -50px 0px" }}
-                  transition={{ duration: 0.4, delay: index * 0.03, ease: "easeOut" }}
-                  whileHover={{ 
-                    y: -8,
-                    scale: 1.02,
-                    transition: { duration: 0.3, ease: "easeOut" }
-                  }}
-                  className="flex items-start gap-3 sm:gap-4 md:gap-5 group cursor-pointer p-3 sm:p-4 rounded-xl hover:bg-muted/30 transition-all duration-300"
+                  className="flex items-start gap-3 sm:gap-4 md:gap-5 group cursor-pointer p-3 sm:p-4 rounded-xl hover:bg-muted/30 transition-all duration-300 hover:-translate-y-2 hover:scale-[1.02]"
                   onClick={() => window.open("https://www.doordash.com/store/safar-kitchen-muncie-37659687/85211748/", "_blank")}
                 >
                   {/* Circular Food Image like Klane */}
-                  <motion.div 
-                    className="flex-shrink-0 w-16 h-16 sm:w-20 sm:h-20 rounded-full overflow-hidden shadow-md border-2 border-transparent group-hover:border-primary transition-all duration-300"
-                    whileHover={{ 
-                      scale: 1.1,
-                      rotate: 5,
-                      boxShadow: "0 10px 25px rgba(254, 152, 157, 0.3)",
-                      transition: { duration: 0.3 }
-                    }}
-                  >
-                    <motion.img
+                  <div className="flex-shrink-0 w-16 h-16 sm:w-20 sm:h-20 rounded-full overflow-hidden shadow-md border-2 border-transparent group-hover:border-primary transition-all duration-300 group-hover:scale-110 group-hover:rotate-3 group-hover:shadow-[0_10px_25px_rgba(254,152,157,0.3)]">
+                    <img
                       src={item.image || "/placeholder.svg"}
                       alt={item.name}
-                      className="w-full h-full object-cover"
-                      whileHover={{ scale: 1.15, transition: { duration: 0.3 } }}
+                      className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
                     />
-                  </motion.div>
+                  </div>
 
                   {/* Content */}
                   <div className="flex-1 min-w-0 pt-1">
                     <div className="flex items-baseline justify-between gap-2 sm:gap-4 mb-1 sm:mb-2">
-                      <motion.h3 
-                        className="text-base sm:text-lg font-bold text-foreground group-hover:text-primary transition-colors"
-                        whileHover={{ x: 4, transition: { duration: 0.2 } }}
-                      >
+                      <h3 className="text-base sm:text-lg font-bold text-foreground group-hover:text-primary transition-colors duration-300">
                         {item.name}
-                      </motion.h3>
-                      <motion.span 
-                        className="text-base sm:text-lg font-bold text-foreground flex-shrink-0"
-                        whileHover={{ 
-                          scale: 1.1,
-                          color: "var(--primary)",
-                          transition: { duration: 0.2 }
-                        }}
-                      >
+                      </h3>
+                      <span className="text-base sm:text-lg font-bold text-foreground flex-shrink-0 group-hover:text-primary transition-colors duration-300">
                         ${item.price.toFixed(2)}
-                      </motion.span>
+                      </span>
                     </div>
-                    <motion.p 
-                      className="text-muted-foreground text-xs sm:text-sm leading-relaxed"
-                      whileHover={{ opacity: 0.8, transition: { duration: 0.2 } }}
-                    >
+                    <p className="text-muted-foreground text-xs sm:text-sm leading-relaxed">
                       {item.description}
-                    </motion.p>
+                    </p>
                   </div>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
