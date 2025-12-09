@@ -99,3 +99,4 @@ npm run lint
 - [x] .gitignore configured
 - [x] Metadata and SEO optimized
 
+
