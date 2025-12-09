@@ -200,13 +200,13 @@ export function HeroSection() {
 
       {/* Large Brand Name at Bottom - Responsive */}
       <motion.div
-        className="absolute bottom-20 sm:bottom-0 left-0 right-0 overflow-hidden px-2 sm:px-4 z-10"
+        className="absolute bottom-20 sm:bottom-8 md:bottom-12 lg:bottom-0 left-0 right-0 overflow-hidden px-2 sm:px-4 z-10"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8, delay: 0.8 }}
       >
         <h1
-          className="text-[3rem] min-[375px]:text-[3.5rem] min-[390px]:text-[3.75rem] min-[430px]:text-[4.25rem] sm:text-[5rem] md:text-[7rem] lg:text-[9rem] xl:text-[11rem] 2xl:text-[13rem] font-serif font-bold tracking-tighter text-center leading-[0.85] pb-6 sm:pb-0 sm:translate-y-[8%] whitespace-nowrap"
+          className="text-[3rem] min-[375px]:text-[3.5rem] min-[390px]:text-[3.75rem] min-[430px]:text-[4.25rem] sm:text-[5rem] md:text-[7rem] lg:text-[9rem] xl:text-[11rem] 2xl:text-[13rem] font-serif font-bold tracking-tighter text-center leading-[0.85] pb-6 sm:pb-4 md:pb-6 lg:pb-0 lg:translate-y-[8%] whitespace-nowrap"
         >
           <span className="text-foreground">Safar</span>
           <span className="text-primary"> Kitchen</span>
